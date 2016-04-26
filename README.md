@@ -23,4 +23,4 @@ Clone the project
 
 git clone git@github.com:rameshuk/scala-hack-night.git
 
-And import as Scala project
+And import as Scala project in intellij
