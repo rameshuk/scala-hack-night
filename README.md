@@ -18,3 +18,9 @@ Set up your login shell script (BASH ~/.bash_profile) and your PATH environment 
 Install scala intellij plug-in by following the steps
 
 https://www.jetbrains.com/help/idea/2016.1/creating-and-running-your-scala-application.html
+
+Clone the project
+
+git clone git@github.com:rameshuk/scala-hack-night.git
+
+And import as Scala project
