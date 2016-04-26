@@ -97,3 +97,74 @@ object MapExample extends App{
 
 
 }
+=====
+
+object Tuple extends App{
+  //write Tuple.java in scala using Tuples
+  val b1 = ("The Hunger Games", 100.0)
+  val b2 = ("The Giver", 80.0)
+  val b3 = ("Divergent", 125.0)
+  val b4 = ("Brave New World", 80.0)
+
+  var listOfBooks = List(b1,b2,b3,b4)
+  var maxBookPrice: (String, Double) = b1
+  for (b <- listOfBooks) {
+    if (b._2 > maxBookPrice._2) {
+      maxBookPrice = b
+    }
+  }
+
+ println(maxBookPrice)
+
+
+
+}
+
+=====
+
+object Trait extends App{
+  //programming for interfaces not implementation
+  var shape: Shape = new Circle(10)
+
+  shape.draw()
+  System.out.println("Area="+shape.getArea())
+
+  //switching from one implementation to another easily
+  shape=new Rectangle(10,10)
+  shape.draw()
+  System.out.println("Area="+shape.getArea())
+
+}
+trait Shape {
+
+  var LABLE: String = "Shape"
+
+  def draw(): Unit
+
+  def getArea(): Double = 0
+}
+
+class Circle(r: Double) extends Shape {
+
+  var radius: Double = r
+
+  override def draw() {
+    println("Drawing Circle")
+  }
+
+  override def getArea(): Double = Math.PI * this.radius * this.radius
+}
+
+class Rectangle(w: Double, h: Double) extends Shape {
+
+  var width: Double = w
+
+  var height: Double = h
+
+  override def draw() {
+    println("Drawing Rectangle")
+  }
+
+  override def getArea(): Double = this.height * this.width
+}
+=====
