@@ -7,12 +7,22 @@ or
 
 > $brew install scala
 
-Set up your login shell script (BASH ~/.bash_profile) and your PATH environment variable
+Install java
+
+Check if Java is already installed
+
+> $ java -version
+
+if it not exist, download the OS X version from the Oracle website.
+
+Check if Java is correctly installed by running the java -version command again.
+
+Add SCALA_HOME, JAVA_HOME to your environment variables by adding the line below to (BASH ~/.bash_profile)
 
 
 > export SCALA_HOME=/Library/opt/scala/scala-2.10.2
->
-> PATH=${SCALA_HOME}/bin:${PATH}
+>export JAVA_HOME="`/usr/libexec/java_home -v 1.8`"
+> PATH=${SCALA_HOME}/${JAVA_HOME}/bin:${PATH}
 
 
 Install scala intellij plug-in by following the steps
